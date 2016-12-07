@@ -1,0 +1,12 @@
+* Firebase Todo App
+** Authentication
+*** TODO Sign in
+*** TODO Sign out
+** Todo
+*** TODO Add todo
+*** TODO Clear completed todos
+*** TODO Delete todo
+*** TODO Edit todo
+*** TODO Filter completed todos
+*** TODO List todos
+*** TODO Toggle todo completed or not
