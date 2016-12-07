@@ -1,9 +1,11 @@
 .todo.app {
   &.container {
-    margin: 1rem 0 0;
+    margin: 4rem 0 0;
   }
 
   &.header {
+    text-align: center;
+
     small {
       margin: 0 0 0 .5rem;
     }
