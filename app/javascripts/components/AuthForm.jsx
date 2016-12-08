@@ -5,6 +5,7 @@ import autobind from 'autobind-decorator';
 import {
   Button,
   Form,
+  Grid,
   Input,
   Message,
   Segment,
@@ -55,7 +56,9 @@ class AuthForm extends React.Component {
     });
   }
 
-  handleSignOut() {
+  handleSignOut(e) {
+    e.preventDefault();
+
     const {
       requestSignOut,
     } = this.props;
@@ -97,10 +100,11 @@ class AuthForm extends React.Component {
 
     if (authenticated) {
       return (
-        <Button
-          basic
-          onClick={this.handleSignOut}
-        >{'Sign out'}</Button>
+        <Grid centered columns={1}>
+          <Grid.Column textAlign={'center'}>
+            <a href="" className={'todo app sign-out'} onClick={this.handleSignOut}>{'Sign out'}</a>
+          </Grid.Column>
+        </Grid>
       );
     }
 
