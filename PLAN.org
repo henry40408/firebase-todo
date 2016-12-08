@@ -1,7 +1,9 @@
 * Firebase Todo App
 ** Authentication
-*** TODO Sign in
-*** TODO Sign out
+*** DONE Sign in
+    CLOSED: [2016-12-08 四 19:51]
+*** DONE Sign out
+    CLOSED: [2016-12-08 四 19:51]
 ** Todo
 *** TODO Add todo
 *** TODO Clear completed todos
