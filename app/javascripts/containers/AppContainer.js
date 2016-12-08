@@ -11,7 +11,9 @@ import App from '../components/App';
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => ({
-  updateAuthenticated: authenticated => dispatch(updateAuthenticated(authenticated)),
+  updateAuthenticated: (authenticated, uid) => (
+    dispatch(updateAuthenticated(authenticated, uid))
+  ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

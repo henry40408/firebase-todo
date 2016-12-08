@@ -20,9 +20,10 @@ class App extends React.Component {
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        updateAuthenticated(true);
+        const { uid } = user;
+        updateAuthenticated(true, uid);
       } else {
-        updateAuthenticated(false);
+        updateAuthenticated(false, '');
       }
     });
   }

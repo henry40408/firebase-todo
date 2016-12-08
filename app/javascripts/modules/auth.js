@@ -22,9 +22,10 @@ const updateAuthError = (code, message) => ({
   message,
 });
 
-export const updateAuthenticated = authenticated => ({
+export const updateAuthenticated = (authenticated, uid) => ({
   type: UPDATE_AUTHENTICATED,
   authenticated,
+  uid,
 });
 
 export const requestSignIn = (email, password) => ({
@@ -78,6 +79,7 @@ const initialState = Immutable.Map({
     message: '',
   }),
   loading: false,
+  uid: '',
 });
 
 const auth = (state = initialState, action) => {
@@ -90,7 +92,8 @@ const auth = (state = initialState, action) => {
 
     case UPDATE_AUTHENTICATED:
       return state
-        .set('authenticated', action.authenticated);
+        .set('authenticated', action.authenticated)
+        .set('uid', action.uid);
 
     case REQUEST_SIGN_IN:
       return state
