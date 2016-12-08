@@ -1,15 +1,12 @@
 import React from 'react';
 
 import {
-  Button,
   Container,
-  Form,
   Grid,
-  Input,
-  Segment,
 } from 'semantic-ui-react';
 
 import firebase from '../firebase';
+import AuthForm from '../containers/AuthFormContainer';
 
 class App extends React.Component {
   static propTypes = {
@@ -39,17 +36,7 @@ class App extends React.Component {
         </h1>
         <Grid centered columns={2}>
           <Grid.Column>
-            <Form>
-              <Segment>
-                <Form.Field>
-                  <Input placeholder={'E-mail'} />
-                </Form.Field>
-                <Form.Field>
-                  <Input type={'password'} placeholder={'Password'} />
-                </Form.Field>
-                <Button primary>{'Login'}</Button>
-              </Segment>
-            </Form>
+            <AuthForm />
           </Grid.Column>
         </Grid>
       </Container>

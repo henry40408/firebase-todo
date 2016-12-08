@@ -8,9 +8,7 @@ import {
 
 import App from '../components/App';
 
-const mapStateToProps = state => ({
-  authenticated: state.authenticated,
-});
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => ({
   updateAuthenticated: authenticated => dispatch(updateAuthenticated(authenticated)),

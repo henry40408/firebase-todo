@@ -12,7 +12,15 @@ module.exports = {
   },
   plugins: {
     babel: {
-      presets: ['es2015', 'react', 'stage-0'],
+      plugins: [
+        'transform-decorators-legacy',
+      ],
+      presets: [
+        'es2015',
+        'es2016',
+        'react',
+        'stage-0',
+      ],
     },
   },
   npm: {

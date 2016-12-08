@@ -8,9 +8,13 @@ import {
 
 import auth, {
   signInEpic,
+  signOutEpic,
 } from './auth';
 
-export const rootEpic = combineEpics(signInEpic);
+export const rootEpic = combineEpics(
+  signInEpic,
+  signOutEpic
+);
 
 export const rootReducer = combineReducers({
   auth,
