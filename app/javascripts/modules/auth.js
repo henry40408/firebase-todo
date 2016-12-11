@@ -5,7 +5,7 @@ import firebase from '../firebase';
 
 // --- action types
 
-const UPDATE_AUTHENTICATED = 'UPDATE_AUTHENTICATED';
+export const UPDATE_AUTHENTICATED = 'UPDATE_AUTHENTICATED';
 const UPDATE_AUTH_ERROR = 'UPDATE_AUTH_ERROR';
 
 const REQUEST_SIGN_IN = 'REQUEST_SIGN_IN';

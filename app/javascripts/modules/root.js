@@ -11,11 +11,18 @@ import auth, {
   signOutEpic,
 } from './auth';
 
+import todos, {
+  todosAfterAuthenticationEpic,
+  todosEpic,
+} from './todos';
+
 export const rootEpic = combineEpics(
   signInEpic,
-  signOutEpic
-);
+  signOutEpic,
+  todosAfterAuthenticationEpic,
+  todosEpic);
 
 export const rootReducer = combineReducers({
   auth,
+  todos,
 });
